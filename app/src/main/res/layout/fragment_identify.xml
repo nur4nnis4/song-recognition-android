@@ -1,0 +1,89 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asus.songrecognition.IdentifyFragment">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_above="@id/main_nav"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="117dp"
+        android:background="@drawable/shape" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="25dp">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="Identify"
+            android:textAllCaps="false"
+            android:textSize="25dp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/tvNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="40dp"/>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@id/main_frame"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageButton
+                android:id="@+id/btn_record"
+                android:background="@drawable/btn_background"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:padding="20dp"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"/>
+
+            <pl.bclogic.pulsator4droid.library.PulsatorLayout
+                android:id="@+id/pulsator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:pulse_count="4"
+                app:pulse_duration="1500"
+                app:pulse_repeat ="0"
+                app:pulse_color="#3ec600"
+                app:pulse_startFromScratch="true"
+                app:pulse_interpolator="Linear"
+                >
+            </pl.bclogic.pulsator4droid.library.PulsatorLayout>
+
+            <ImageView
+                android:id="@+id/imgV_mic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_mic"/>
+
+        </FrameLayout>
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textStyle="normal|bold"
+            android:layout_gravity="center"
+            android:textSize="25dp" />
+
+    </LinearLayout>
+
+
+</FrameLayout>
